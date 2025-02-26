@@ -3,12 +3,12 @@
 
  $name = '「江藤」';
 
-$newname = '私の名前は' . $name . 'です。';
-echo  '私の名前は' . $name . 'です。';
+$Name = '私の名前は' . $name . 'です。';
+echo '私の名前は' . $name . 'です。';
 
 // Q2 四則演算
 
-$num= 5*4;
+$num = 5 * 4;
 echo $num;
 
 $num /= 2;
@@ -26,14 +26,14 @@ echo '現在時刻は、' . date("Y年m月d日 H時i分s秒") . 'です。';
 if ($device == 'windows' || $device =='mac') {
   echo '使用OSは、' . $device . 'です。';
  
- }  else {
-     echo 'どちらでもありません。';
+ } else {
+    echo 'どちらでもありません。';
  }
 
 // Q5 条件分岐-2 三項演算子
 $age = 18;
 
-$message = ($age > 18) ? '未成年です。' : '成人です。';
+$message = ($age < 18) ? '未成年です。' : '成人です。';
 
 echo $message;
 
@@ -53,7 +53,7 @@ $prefectures = [
   '茨城県' => '水戸市' ];
 
 foreach ($prefectures as $value) {
-  echo  "$value \n";
+  echo "$value \n";
 }
 
 // Q8 連想配列-2
@@ -66,11 +66,10 @@ $prefectures = [
   '群馬県' => '前橋市',
   '茨城県' => '水戸市' ];
   
-foreach ($prefectures as $key => $value) {
-  if ($key == '埼玉県') {
-     echo $key. 'の県庁所在地は、'. $value. 'です。';
+foreach ($prefectures as $prefecture => $city) {
+  if ($prefecture === '埼玉県') {
+     echo $prefecture . 'の県庁所在地は、' . $city . 'です。';
   }
-
 }
 
 // Q9 連想配列-3
@@ -98,10 +97,10 @@ foreach ($prefectures as $key => $value) {
     )
     {
       echo "\n";
-      echo  $key. 'の県庁所在地は、'. $value. 'です。';
+      echo $key . 'の県庁所在地は、' . $value . 'です。';
     } else {
         echo "\n";
-        echo $key.'は関東地方ではありません。';
+        echo $key .'は関東地方ではありません。';
     }
 }
 
@@ -110,7 +109,7 @@ foreach ($prefectures as $key => $value) {
 function hello($name)
 
 {
-return $name."さん、こんにちは。\n";
+return $name . "さん、こんにちは。\n";
    
 }
     
@@ -130,7 +129,7 @@ function  distinguishNum($number)
 {
 
     if($number % 2 == 0) {
-        return $number.  "は偶数です。\n";
+        return $number . "は偶数です。\n";
     }
     else
     {
